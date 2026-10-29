@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestureSynth | Play Music with Your Hands</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">
+      <span class="logo-icon">♪</span>
+      GestureSynth
+    </a>
+    <span class="status"><span class="status-dot"></span> Interactive Music Lab</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">A NEW WAY TO MAKE MUSIC</p>
+      <h1>Your hands.<br><span>Your music.</span></h1>
+      <p class="subtitle">
+        Turn your hand movements into sound with a virtual instrument
+        powered by real-time hand tracking.
+      </p>
+    </section>
+
+    <section class="studio">
+      <div class="panel camera-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-label">01 / MOTION</span>
+            <h2>Hand tracking</h2>
+          </div>
+          <span class="pill" id="cameraStatus">Camera off</span>
+        </div>
+
+        <div class="camera-placeholder" id="cameraArea">
+          <div class="camera-symbol">◎</div>
+          <h3>Your camera preview</h3>
+          <p>Camera and hand tracking will be connected in the next milestone.</p>
+        </div>
+
+        <button class="primary-button" id="cameraButton" disabled>
+          Camera integration coming next
+        </button>
+        <p class="hint">Your browser will request camera permission when we enable tracking.</p>
+      </div>
+
+      <div class="panel music-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-label">02 / SOUND</span>
+            <h2>Virtual synthesizer</h2>
+          </div>
+          <span class="pill">Audio preview</span>
+        </div>
+
+        <label for="instrument">Instrument sound</label>
+        <select id="instrument">
+          <option value="synth">Classic Synth</option>
+          <option value="soft">Soft Keys</option>
+          <option value="bass">Deep Bass</option>
+        </select>
+
+        <div class="settings-row">
+          <div>
+            <label for="musicalKey">Musical key</label>
+            <select id="musicalKey">
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+          <div>
+            <label for="scale">Scale</label>
+            <select id="scale">
+              <option value="major">Major</option>
+              <option value="minor">Minor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="volume-heading">
+          <label for="volume">Master volume</label>
+          <span id="volumeValue">50%</span>
+        </div>
+        <input id="volume" type="range" min="0" max="100" value="50">
+
+        <div class="keyboard-heading">
+          <span>Test your sound</span>
+          <span class="hint">Click a key to play</span>
+        </div>
+        <div class="keyboard" id="keyboard">
+          <button class="key" data-note="C4">C</button>
+          <button class="key" data-note="D4">D</button>
+          <button class="key" data-note="E4">E</button>
+          <button class="key" data-note="F4">F</button>
+          <button class="key" data-note="G4">G</button>
+          <button class="key" data-note="A4">A</button>
+          <button class="key" data-note="B4">B</button>
+          <button class="key" data-note="C5">C</button>
+        </div>
+
+        <p class="hint" id="audioStatus" aria-live="polite">
+          Select a key to hear your first note.
+        </p>
+      </div>
+    </section>
+
+    <section class="features">
+      <article>
+        <span>01</span>
+        <h3>Motion recognition</h3>
+        <p>Track hand movements through your webcam.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Expressive sound</h3>
+        <p>Experiment with notes, scales and synthesizer tones.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Made together</h3>
+        <p>An open-source project built collaboratively.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>GestureSynth © 2026</span>
+    <span>Explore sound through movement.</span>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
